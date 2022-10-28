@@ -12997,10 +12997,8 @@ if('undefined' !== typeof Module){ // presumably an Emscripten build
     delete self.sqlite3ApiConfig;
   }
 
-  if(self.location && +self.location.port > 1024){
-    console.warn("Installing sqlite3 bits as global S for local dev/test purposes.");
-    self.S = sqlite3;
-  }
+  console.warn("Installing sqlite3 bits as global S for local dev/test purposes.");
+  self.S = sqlite3;
 
   /* Clean up temporary references to our APIs... */
   delete sqlite3.capi.util /* arguable, but these are (currently) internal-use APIs */;
