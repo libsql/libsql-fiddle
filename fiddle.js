@@ -803,10 +803,6 @@
       }, false);
       btnToggleView.click()/*default to terminal view*/;
     }
-    SF.echo('This experimental app is provided in the hope that it',
-            'may prove interesting or useful but is not an officially',
-            'supported deliverable of the sqlite project. It is subject to',
-            'any number of changes or outright removal at any time.\n');
     const urlParams = new URL(self.location.href).searchParams;
     SF.dbExec(urlParams.get('sql') || null);
     delete ForceResizeKludge.$disabled;
