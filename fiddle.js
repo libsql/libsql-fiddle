@@ -787,7 +787,7 @@
       /* Set up the terminal-style view... */
       const eTerm = window.jQuery('#view-terminal').empty();
       SF.jqTerm = eTerm.terminal(SF.dbExec.bind(SF),{
-        prompt: 'sqlite> ',
+        prompt: 'libsql> ',
         greetings: false /* note that the docs incorrectly call this 'greeting' */
       });
       /* Set up a button to toggle the views... */
